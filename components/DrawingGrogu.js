@@ -14,14 +14,14 @@ const DrawingGrogu = () => {
     Dimensions.get("window").width
   );
   const [canvasHeight, setCanvasHeight] = useState(
-    Dimensions.get("window").height * 0.4 // 使用視窗高度的一部分，這裡是40%
+    Dimensions.get("window").height * 0.4 
   );
 
   useEffect(() => {
     // 監聽窗口大小變化，更新畫布尺寸
     const updateCanvasSize = () => {
       setCanvasWidth(Dimensions.get("window").width - 2);
-      setCanvasHeight(Dimensions.get("window").height * 0.4); // 使用視窗高度的一部分，這裡是40%
+      setCanvasHeight(Dimensions.get("window").height * 0.4); 
     };
 
     Dimensions.addEventListener("change", updateCanvasSize);
@@ -36,7 +36,7 @@ const DrawingGrogu = () => {
     const x = Math.random() * canvasWidth;
     const y = Math.random() * canvasHeight;
     const imageUrl =
-      "https://github.com/Retsomm/reactNativeButton/blob/main/src/img/grogu2.png?raw=true"; // 在這裡設置你的圖片位址
+      "https://github.com/Retsomm/reactNativeButton/blob/main/src/img/grogu2.png?raw=true"; 
     const newDrawing = { x, y, imageUrl };
     setDrawings([...drawings, newDrawing]);
   };
